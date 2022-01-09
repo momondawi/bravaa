@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 * {
     box-sizing:border-box;
 }
@@ -7,21 +9,35 @@ html {
     --blanc: #c4d2d2;
     --green_logo:#02dc82;
     --white_logo:#ffffff;
+    --green-bttn: #02dc82;
+    --gstart: #004942;
 }
 
 body{
     margin: 0;
     padding: 0;
+    background-image: url("/background_ndawi.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 header {
-    padding: 20px;
-    display: flex;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#container_header{    
+    width: 80%;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
-    background: rgb(25, 26, 48);
+    flex-wrap: wrap;
 }
 
 #left{
@@ -29,6 +45,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #logo {
@@ -51,11 +68,14 @@ ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 li{
     margin-left: 40px;
     list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
 }
 
 a {
@@ -68,5 +88,87 @@ a {
     color: var(--blanc);
     border: none;
     padding: 10px 15px;
-    margin-right: 50px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+
+#container_main{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap-reverse;
+}
+
+#leftt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bttn {
+    background-color: var(--green-bttn);
+    color: var(--gstart);
+    border: none;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    border: 2px solid var(--green-bttn);
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.bttn:hover{
+    background-color: transparent;
+    color: #ffffff;
+}
+
+h1{
+    font-size: 70px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+#img_container {
+    height: 425px;
+    width: 425px;
+    border: 10px solid #ffffff;
+}
+
+#img_container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: img;
+    animation-duration: 1100ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes img {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Ubuntu', sans-serif;
 }
